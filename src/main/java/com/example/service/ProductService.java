@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
-public class ProductManagement {
+public class ProductService {
 
     ProductRepository productRepository;
 
@@ -37,6 +37,6 @@ public class ProductManagement {
 
       productRepository.deleteById(product);
 
-        return product;
+      return product;
     }
 }

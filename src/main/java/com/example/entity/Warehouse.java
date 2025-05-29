@@ -1,14 +1,13 @@
 package com.example.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table
 public class Warehouse {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
 
     String code;
@@ -55,4 +54,5 @@ public class Warehouse {
     public void setWarehousecol(String warehousecol) {
         Warehousecol = warehousecol;
     }
+
 }

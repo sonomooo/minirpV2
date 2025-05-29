@@ -1,5 +1,6 @@
 package com.example.repository;
 
+import com.example.entity.Warehouse;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -10,13 +11,10 @@ import java.util.Optional;
 @Repository
 public interface WarehouseRepository extends JpaRepository {
 
-    @Override
-    Object save(Object entity);
+    Warehouse save(Object entity);
 
-    @Override
-    Optional findById(Object o);
+    Optional<Warehouse> findById(Object o);
 
-    @Override
     void deleteById(Object o);
 
 }

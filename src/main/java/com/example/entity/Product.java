@@ -1,14 +1,13 @@
 package com.example.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "product")
 public class Product {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     private String sku;
@@ -57,4 +56,5 @@ public class Product {
     public void setStatus(String status) {
         this.status = status;
     }
+
 }

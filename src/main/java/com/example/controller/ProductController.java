@@ -1,12 +1,13 @@
 package com.example.controller;
 
 import com.example.entity.Product;
-import com.example.service.ProductManagement;
+import com.example.service.ProductService;
+import org.springframework.stereotype.Controller;
 
-@org.springframework.stereotype.Controller
-public class Controller {
+@Controller
+public class ProductController {
 
-    ProductManagement productManagement;
+    ProductService productManagement;
 
     public Product create(Product product){
 
